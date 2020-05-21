@@ -7,6 +7,6 @@ export function createGetter(path) {
   const pathArr = path.split('.')
   return function (nestedObj) {
     return pathArr.reduce((obj, key) =>
-        (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
+      (obj && obj[key] !== 'undefined') ? obj[key] : undefined, nestedObj);
   }
 }
