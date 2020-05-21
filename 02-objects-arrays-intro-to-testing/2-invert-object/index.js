@@ -4,5 +4,9 @@
  * @returns {object | undefined} - returns new object or undefined if nothing did't pass
  */
 export function invertObj(obj) {
-
+  let reversed = {};
+  for (let key in obj) {
+    reversed[obj[key]] = key;
+  }
+  return (obj !== undefined) ? reversed : undefined;
 }
